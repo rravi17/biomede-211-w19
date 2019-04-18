@@ -2391,9 +2391,13 @@ This is what we'd expect for a circuit, for it must be stable otherwise we would
 \section{First-order systems with sources}
 \section{Several singular functions}
 \subsection{Unit step function, $u(t-t_0) = 1, t>t_0$}
+The unit step function is a function that evaluates to 0 for all time before T and evaluate to 1 for all time after T, and at t = T, the function "jumps" from 0 to 1. That is, the function looks like a "step" up. To transform the unit step function, or make it upside down, multiply it by -1. To increase the height of the step function, multiply it by a constant. To "shift" the unit step function to jump up at a value T, use a constant for the value T. So, for example, u(t-5) would evaluate to 0 for all time until t=5, and evaluate to 1 for all time after 5.  
 \subsubsection{The Laplace transform of the unit step function}
+The Laplace transform of the unit step function is 1/s, as the function is just 1 after t=T. 
 \subsection{Unit impulse function, $\delta(t) = du(t)/dt$}
+The unit impulse function is the derivative of the unit step function, and is represented by a lowercase \delta(t). At all time t < T and t > T, the function evaluates to 0, and at t = T, the function evaluates to infinity. The unit implulse function is used to model a pulse of input energy, current, etc. to a system. 
 \subsubsection{Its ``sifting'' abilities}
+If the unit impulse is applied to every point on a function it is being convolved with, you are simply sifting through the function it is being convolved with, evaluating every single point on the curve. So, the output would look exactly like the function you begin with, but it would be an infinite amount of points rather than a smooth curve. 
 \subsubsection{The Laplace transform of the unit impulse function}
 \subsection{Unit ramp function, $r(t) = \int u(t)dt $}
 \subsubsection{The Laplace transform of the unit impulse function}
